@@ -4,7 +4,11 @@ This mod adds a pick, axe, and shovel that not only dig on a left click, but wil
 Have you ever been frustrated when digging a mine or exploring a cavern because you have to dig, dig, dig, then swap the active inventory item to a torch, place a torch, swap the active inventory item back to your pick, and repeat?  Did you ever wish that you could just place a torch (or a block of stone or glass) with a right click while still wielding your pick, axe, or shovel?  If so, then this mod is for you!
 
 The tools are based upon the diamond versions, and are crafted by replacing the top stick in the recipe with a mese crystal:
-
+[code]
+diamond,   diamond   ,diamond        diamond,diamond              diamond
+       ,mese fragment,               diamond,mese fragment      mese fragment
+       ,   stick     ,                      ,stick                 stick
+[/code]
 [img]http://i57.tinypic.com/2maaog.png[/img]
 
 These tools have the same stats as a diamond tool, with the exception that the uses has been increased by 10%.  (to account for the extra expense of adding a mese crystal)
