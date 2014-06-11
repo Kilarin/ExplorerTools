@@ -9,7 +9,7 @@ The tools are based upon the diamond versions, and are crafted by replacing the 
 diamond,   diamond   ,diamond        diamond,diamond              diamond
        ,mese fragment,               diamond,mese fragment      mese fragment
        ,   stick     ,                      ,stick                 stick
-```      <p>
+```
 ![alt text](http://i57.tinypic.com/2maaog.png "image")
 
 These tools have the same stats as a diamond tool, with the exception that the uses has been increased by 10%.  (to account for the extra expense of adding a mese crystal)<p>
