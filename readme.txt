@@ -1,4 +1,4 @@
-[b]Explorer Tools Mod[/b]
+[b]Explorer Tools Version 1.0[/b]
 This mod adds a pick, axe, and shovel that not only dig on a left click, but will place whatever item is in the inventory slot immediately to their right on a right click.
 
 Have you ever been frustrated when digging a mine or exploring a cavern because you have to dig, dig, dig, then swap the active inventory item to a torch, place a torch, swap the active inventory item back to your pick, and repeat?  Did you ever wish that you could just place a torch (or a block of stone or glass) with a right click while still wielding your pick, axe, or shovel?  If so, then this mod is for you!
@@ -32,12 +32,17 @@ Do not use with Inventory Tweak mod, on right click your tool will disappear!
 [b]License:[/b]
 CC0
 
-[b]To install:[/b]
-Simply unzip the file into your mods folder, no renaming necessary.
-
 [b]To browse source:[/b]
 [url]https://github.com/Kilarin/ExplorerTools[/url]
 
 [b]Download:[/b]
 [url=http://www.mediafire.com/download/dlaftp25emeg52i/explorertools.zip]explorertools.zip[/url]
 (also added as file attachment)
+
+[b]To install:[/b]
+Simply unzip the file into your mods folder, no renaming necessary.
+OR, simply install it directly from minetest using the online mod repository.
+
+[b]Mod Database:[/b]
+If you use this mod, please consider reviewing it on the MineTest Mod Database.
+[url]https://forum.minetest.net/mmdb/mod/explorertools/[/url]

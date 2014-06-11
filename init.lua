@@ -1,5 +1,8 @@
---This code was written by Donald Hines and his son Jesse Hines
+--Explorer Tools version 1.0
+
+--This code was written by Kilarin (Donald Hines) and his son Jesse Hines
 --License:CC0, you can do whatever you wish with it.
+
 
 ---
 ---Function
