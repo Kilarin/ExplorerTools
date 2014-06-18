@@ -69,3 +69,8 @@ If you use either of these mods, please consider reviewing it on the MineTest Mo
 [https://forum.minetest.net/mmdb/mod/explorertools/](https://forum.minetest.net/mmdb/mod/explorertools/)<p>
 [https://forum.minetest.net/mmdb/mod/explorertoolsall/](https://forum.minetest.net/mmdb/mod/explorertoolsall/)
 
+**Change Log:**<p>
+1.1 changed hard depends on default to soft<p>
+    removed requirement that index pos of tool be less than 8<p>
+    updated readme to include explorertoolsall referenc<p>
+1.0 initial release
