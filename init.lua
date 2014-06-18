@@ -1,4 +1,4 @@
---Explorer Tools version 1.0
+--Explorer Tools version 1.1
 
 --This code was written by Kilarin (Donald Hines) and his son Jesse Hines
 --License:CC0, you can do whatever you wish with it.
@@ -16,32 +16,60 @@ function explorertools_place(item, player, pointed)
   --find index of item to right of wielded tool
   --(could have gotten this directly from item I suppose, but this works fine)
   local idx = player:get_wield_index() + 1
-  if idx < 8 then  --make certain tool was in first 7 slots
-    local inv = player:get_inventory()
-    local stack = inv:get_stack("main", idx) --stack=stack to right of tool
-    if pointed ~= nil then
-      local success
-      --attempt to place stack where tool was pointed
-      stack, success = minetest.item_place(stack, player, pointed)
-      if success then  --if item was placed, put modified stack back in inv
-        inv:set_stack("main", idx, stack)
-      end --success
-    end --pointed ~= nil
-  end --idx<8
+  local inv = player:get_inventory()
+  local stack = inv:get_stack("main", idx) --stack=stack to right of tool
+  if pointed ~= nil then
+    local success
+    --attempt to place stack where tool was pointed
+    stack, success = minetest.item_place(stack, player, pointed)
+    if success then  --if item was placed, put modified stack back in inv
+      inv:set_stack("main", idx, stack)
+    end --success
+  end --pointed ~= nil
 end --function explorertools_place
 
 ---
----Explorer Pickaxe
+---Explorer Tools register recipes
 ---
 
-minetest.register_craft({
-        output = 'explorertools:pick_explorer',
-  recipe = {
-    {'default:diamond', 'default:diamond', 'default:diamond'},
-    {'', 'default:mese_crystal_fragment', ''},
-    {'', 'group:stick', ''},
-  }
-})
+
+--we put the recipies inside an if checking for default so that
+--in the unlikely case someone is running this without default,
+--they still could.  they would just have to use /giveme or creative
+--mode to get the tools
+if minetest.get_modpath("default") then
+  minetest.register_craft({
+          output = 'explorertools:pick_explorer',
+    recipe = {
+      {'default:diamond', 'default:diamond', 'default:diamond'},
+      {'', 'default:mese_crystal_fragment', ''},
+      {'', 'group:stick', ''},
+    }
+  })
+
+  minetest.register_craft({
+  	output = 'explorertools:axe_explorer',
+  	recipe = {
+  		{'default:diamond', 'default:diamond'},
+  		{'default:diamond', 'default:mese_crystal_fragment'},
+  		{'', 'group:stick'},
+  	}
+  })
+
+  minetest.register_craft({
+  	output = 'explorertools:shovel_explorer',
+  	recipe = {
+  		{'default:diamond'},
+  		{'default:mese_crystal_fragment'},
+  		{'group:stick'},
+  	}
+  })
+end --if default exists register recipes
+
+
+---
+---Explorer Tools Register Tools
+---
 
 minetest.register_tool("explorertools:pick_explorer", {
   description = "Explorer Pickaxe",
@@ -55,19 +83,6 @@ minetest.register_tool("explorertools:pick_explorer", {
     damage_groups = {fleshy=5},
   },
   on_place = explorertools_place
-})
-
----
----Explorer Axe
----
-
-minetest.register_craft({
-	output = 'explorertools:axe_explorer',
-	recipe = {
-		{'default:diamond', 'default:diamond'},
-		{'default:diamond', 'default:mese_crystal_fragment'},
-		{'', 'group:stick'},
-	}
 })
 
 
@@ -85,18 +100,6 @@ minetest.register_tool("explorertools:axe_explorer", {
   on_place = explorertools_place
 })
 
----
----Explorer Shovel
----
-
-minetest.register_craft({
-	output = 'explorertools:shovel_explorer',
-	recipe = {
-		{'default:diamond'},
-		{'default:mese_crystal_fragment'},
-		{'group:stick'},
-	}
-})
 
 minetest.register_tool("explorertools:shovel_explorer", {
 	description = "Explorer Shovel",
@@ -115,4 +118,5 @@ minetest.register_tool("explorertools:shovel_explorer", {
 
 
 ---I didn't add hoe because there isn't a diamond hoe in the default game,
----but it would be easy to do if someone wanted it.
+---and you don't use a hoe for exploring or building
+---but it would be easy to add if someone wanted it.
