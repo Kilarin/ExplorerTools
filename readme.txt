@@ -69,8 +69,6 @@ If you use either of these mods, please consider reviewing it on the MineTest Mo
 [url]https://forum.minetest.net/mmdb/mod/explorertoolsall/[/url]
 
 [b]Change Log:[/b]
-
-[b]Change Log:[/b]
 1.2 change from kaeza: Force-update stack instead of relying on success indicator.
     This eliminates a problem where using explorertoolsall and an itemframe would
     allow you to duplicate items.  And, to my surprise, it does not seem to cause
